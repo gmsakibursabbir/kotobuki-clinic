@@ -8,89 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ==================== Video Modal Functionality ====================
-  const videoModal = document.getElementById("videoModal");
-  const videoPlayer = document.getElementById("videoPlayer");
-  const videoContainer = document.getElementById("videoContainer");
-
-  function handleVideoOpen() {
-    document.querySelectorAll(".open-video-btn").forEach((button) => {
-      button.addEventListener("click", () => {
-        if (!videoModal || !videoPlayer || !videoContainer) return;
-
-        const videoSrc = button.dataset.videoSrc;
-        const videoType = button.dataset.videoType;
-
-        // Set video source
-        videoPlayer.src = videoSrc;
-
-        // Reset container classes
-        videoContainer.className = "rounded-xl overflow-hidden bg-black";
-        const containerParent = videoContainer.parentElement;
-
-        // Handle different video types
-        if (videoType === "short") {
-          videoContainer.classList.add("aspect-portrait");
-          containerParent.classList.add("video-container-mobile");
-
-          // Mobile height adjustment
-          if (window.matchMedia("(max-width: 640px)").matches) {
-            videoContainer.style.maxHeight = "calc(90vh - 40px)";
-          }
-        } else {
-          videoContainer.classList.add("aspect-video");
-          containerParent.classList.remove("video-container-mobile");
-          videoContainer.style.maxHeight = "";
-        }
-
-        // Show modal
-        videoModal.classList.remove("hidden");
-        videoModal.classList.add("modal-enter-active");
-
-        // Play video with error handling
-        videoPlayer.play().catch((error) => {
-          console.error("Video playback failed:", error);
-        });
-      });
-    });
-  }
-
-  function handleVideoClose() {
-    const closeModal = () => {
-      if (!videoModal || !videoPlayer) return;
-      videoModal.classList.remove("modal-enter-active");
-      videoModal.classList.add("hidden");
-      videoPlayer.pause();
-      videoPlayer.currentTime = 0;
-
-      // Reset container styles
-      videoContainer.className = "bg-black rounded-b-xl";
-      videoContainer.style.maxHeight = "";
-      videoContainer.parentElement.classList.remove("video-container-mobile");
-    };
-
-    document
-      .getElementById("closeModalBtn")
-      ?.addEventListener("click", closeModal);
-    document
-      .getElementById("modalOverlay")
-      ?.addEventListener("click", closeModal);
-    document.addEventListener(
-      "keydown",
-      (e) => e.key === "Escape" && closeModal()
-    );
-
-    // Reset video on modal close
-    videoModal.addEventListener("transitionend", (e) => {
-      if (videoModal.classList.contains("hidden")) {
-        videoPlayer.src = "";
-      }
-    });
-  }
-
-  handleVideoOpen();
-  handleVideoClose();
-
   // ==================== Tab Functionality ====================
   function initializeTabs() {
     const tabButtons = document.querySelectorAll(".tab-button");
@@ -250,72 +167,79 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Newsletter Popup Module
-  (function () {
-    const popup = document.getElementById("newsletter-popup");
-    const closeBtns = document.querySelectorAll(".js-popup-close");
-    const form = document.getElementById("newsletter-form");
-    const successMessage = document.getElementById("success-message");
+  // ==================== Popup ====================
+(function () {
+  const popup = document.getElementById("newsletter-popup");
+  const closeBtns = document.querySelectorAll(".js-popup-close");
+  const form = document.getElementById("newsletter-form");
+  const successMessage = document.getElementById("success-message");
 
-    if (!popup) return;
+  if (!popup) return;
 
-    let popupTimer;
-    const SHOW_DELAY = 5000; // 5 seconds
+  let popupTimer;
+  const SHOW_DELAY = 5000; // 5 seconds
 
-    function init() {
-      setupEventListeners();
-      startPopupTimer();
-    }
+  function init() {
+    setupEventListeners();
+    startPopupTimer();
+  }
 
-    function setupEventListeners() {
-      // Close buttons
-      closeBtns.forEach((btn) => {
-        btn.addEventListener("click", closePopup);
-      });
-
-      // Escape key
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && !popup.classList.contains("hidden")) {
-          closePopup();
-        }
-      });
-
-      // Form submission
-      if (form) {
-        form.addEventListener("submit", handleSubmit);
+  function setupEventListeners() {
+    // Close when clicking outside content
+    popup.addEventListener("click", (e) => {
+      if (e.target === popup) {
+        closePopup();
       }
-    }
+    });
 
-    function startPopupTimer() {
-      popupTimer = setTimeout(() => {
-        popup.classList.remove("hidden");
-        // Focus on email input
-        setTimeout(() => form.querySelector("input")?.focus(), 100);
-      }, SHOW_DELAY);
-    }
+    // Close buttons
+    closeBtns.forEach((btn) => {
+      btn.addEventListener("click", closePopup);
+    });
 
-    function closePopup() {
-      popup.classList.add("hidden");
-      clearTimeout(popupTimer);
-      if (form) form.reset();
-      if (successMessage) successMessage.classList.add("hidden");
-      if (form) form.classList.remove("hidden");
-    }
-
-    function handleSubmit(e) {
-      e.preventDefault();
-      if (form.checkValidity()) {
-        // Show success message
-        if (successMessage) successMessage.classList.remove("hidden");
-        if (form) form.classList.add("hidden");
-
-        // Auto-close after 3 seconds
-        setTimeout(closePopup, 3000);
+    // Escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !popup.classList.contains("hidden")) {
+        closePopup();
       }
-    }
+    });
 
-    init();
-  })();
+    // Form submission
+    if (form) {
+      form.addEventListener("submit", handleSubmit);
+    }
+  }
+
+  function startPopupTimer() {
+    popupTimer = setTimeout(() => {
+      popup.classList.remove("hidden");
+      // Focus on email input
+      setTimeout(() => form.querySelector("input")?.focus(), 100);
+    }, SHOW_DELAY);
+  }
+
+  function closePopup() {
+    popup.classList.add("hidden");
+    clearTimeout(popupTimer);
+    if (form) form.reset();
+    if (successMessage) successMessage.classList.add("hidden");
+    if (form) form.classList.remove("hidden");
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (form.checkValidity()) {
+      // Show success message
+      if (successMessage) successMessage.classList.remove("hidden");
+      if (form) form.classList.add("hidden");
+
+      // Auto-close after 3 seconds
+      setTimeout(closePopup, 3000);
+    }
+  }
+
+  init();
+})();
 
   // Smooth scroll to top
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
