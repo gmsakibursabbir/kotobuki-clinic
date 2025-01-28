@@ -25,7 +25,7 @@ toggleButtons.forEach((button) => {
         otherList
           .closest(".formula-item-content")
           .querySelector(".dropdown-arrow")
-          .classList.remove("rotate-180");
+          .classList.remove("rotate-179");
       }
     });
 
