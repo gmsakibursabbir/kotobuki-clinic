@@ -241,64 +241,6 @@ document.addEventListener("DOMContentLoaded", function () {
   init();
 })();
 
-  // Smooth scroll to top
-  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-  const progressCircle = document.getElementById("progressCircle");
-  const radius = 10;
-  const circumference = 2 * Math.PI * radius;
-
-  // Initialize stroke properties
-  progressCircle.style.strokeDasharray = circumference;
-  progressCircle.style.strokeDashoffset = circumference;
-
-  // Update progress on scroll
-  function updateProgress() {
-    const scrollY = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const totalHeight = document.documentElement.scrollHeight - windowHeight;
-    let progress = scrollY / totalHeight;
-
-    // Ensure progress reaches 1 at bottom
-    if (
-      window.scrollY + windowHeight >=
-      document.documentElement.scrollHeight
-    ) {
-      progress = 1;
-    }
-
-    const offset = circumference - progress * circumference;
-    progressCircle.style.strokeDashoffset = offset;
-  }
-
-  // Show/hide button
-  function toggleButtonVisibility() {
-    if (window.scrollY > 300) {
-      scrollToTopBtn.classList.remove("opacity-0", "invisible", "scale-90");
-      scrollToTopBtn.classList.add("opacity-100", "visible", "scale-100");
-    } else {
-      scrollToTopBtn.classList.add("opacity-0", "invisible", "scale-90");
-      scrollToTopBtn.classList.remove("opacity-100", "visible", "scale-100");
-    }
-  }
-
-  window.addEventListener("scroll", () => {
-    updateProgress();
-    toggleButtonVisibility();
-  });
-
-  // Smooth scroll to top
-  scrollToTopBtn.addEventListener("click", function (e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });
-
-  // Initialize
-  updateProgress();
-  toggleButtonVisibility();
-
   //preloader
   const preloader = document.getElementById("preloader");
 
