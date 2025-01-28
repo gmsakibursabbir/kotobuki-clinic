@@ -9,34 +9,35 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ==================== Tab Functionality ====================
-  function initializeTabs() {
-    const tabButtons = document.querySelectorAll(".tab-button");
-    const tabContents = document.querySelectorAll(".tab-content");
+const toggleButtons = document.querySelectorAll(".ingredients-toggle");
 
-    tabButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const tabId = button.dataset.tab;
+toggleButtons.forEach((button) => {
+  button.addEventListener("click", function (e) {
+    e.preventDefault();
+    const cardContent = this.closest(".formula-item-content");
+    const menuList = cardContent.querySelector(".menuss-lists");
+    const arrow = this.querySelector(".dropdown-arrow");
 
-        // Update buttons
-        tabButtons.forEach((btn) => {
-          btn.classList.remove("bg-softwhite", "text-pastelpink");
-          btn.classList.add("hover:bg-softwhite", "text-middark");
-        });
-        button.classList.add("bg-softwhite", "text-pastelpink");
-        button.classList.remove("hover:bg-softwhite", "text-middark");
-
-        // Update contents
-        tabContents.forEach((content) => content.classList.add("hidden"));
-        document
-          .querySelector(`[data-content="${tabId}"]`)
-          ?.classList.remove("hidden");
-      });
+    // Close other open menus
+    document.querySelectorAll(".menuss-lists").forEach((otherList) => {
+      if (otherList !== menuList) {
+        otherList.classList.remove("active");
+        otherList
+          .closest(".formula-item-content")
+          .querySelector(".dropdown-arrow")
+          .classList.remove("rotate-180");
+      }
     });
 
-    // Activate first tab
-    tabButtons[0]?.click();
-  }
-  initializeTabs();
+    // Toggle current menu
+    menuList.classList.toggle("active");
+    arrow.classList.toggle("rotate-180");
+
+    // Update aria-expanded
+    const isExpanded = menuList.classList.contains("active");
+    this.setAttribute("aria-expanded", isExpanded);
+  });
+});
 
   // ==================== Accordion Dropdowns ====================
   function initializeDropdowns() {
@@ -168,78 +169,78 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ==================== Popup ====================
-(function () {
-  const popup = document.getElementById("newsletter-popup");
-  const closeBtns = document.querySelectorAll(".js-popup-close");
-  const form = document.getElementById("newsletter-form");
-  const successMessage = document.getElementById("success-message");
+  (function () {
+    const popup = document.getElementById("newsletter-popup");
+    const closeBtns = document.querySelectorAll(".js-popup-close");
+    const form = document.getElementById("newsletter-form");
+    const successMessage = document.getElementById("success-message");
 
-  if (!popup) return;
+    if (!popup) return;
 
-  let popupTimer;
-  const SHOW_DELAY = 5000; // 5 seconds
+    let popupTimer;
+    const SHOW_DELAY = 5000; // 5 seconds
 
-  function init() {
-    setupEventListeners();
-    startPopupTimer();
-  }
-
-  function setupEventListeners() {
-    // Close when clicking outside content
-    popup.addEventListener("click", (e) => {
-      if (e.target === popup) {
-        closePopup();
-      }
-    });
-
-    // Close buttons
-    closeBtns.forEach((btn) => {
-      btn.addEventListener("click", closePopup);
-    });
-
-    // Escape key
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !popup.classList.contains("hidden")) {
-        closePopup();
-      }
-    });
-
-    // Form submission
-    if (form) {
-      form.addEventListener("submit", handleSubmit);
+    function init() {
+      setupEventListeners();
+      startPopupTimer();
     }
-  }
 
-  function startPopupTimer() {
-    popupTimer = setTimeout(() => {
-      popup.classList.remove("hidden");
-      // Focus on email input
-      setTimeout(() => form.querySelector("input")?.focus(), 100);
-    }, SHOW_DELAY);
-  }
+    function setupEventListeners() {
+      // Close when clicking outside content
+      popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+          closePopup();
+        }
+      });
 
-  function closePopup() {
-    popup.classList.add("hidden");
-    clearTimeout(popupTimer);
-    if (form) form.reset();
-    if (successMessage) successMessage.classList.add("hidden");
-    if (form) form.classList.remove("hidden");
-  }
+      // Close buttons
+      closeBtns.forEach((btn) => {
+        btn.addEventListener("click", closePopup);
+      });
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    if (form.checkValidity()) {
-      // Show success message
-      if (successMessage) successMessage.classList.remove("hidden");
-      if (form) form.classList.add("hidden");
+      // Escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !popup.classList.contains("hidden")) {
+          closePopup();
+        }
+      });
 
-      // Auto-close after 3 seconds
-      setTimeout(closePopup, 3000);
+      // Form submission
+      if (form) {
+        form.addEventListener("submit", handleSubmit);
+      }
     }
-  }
 
-  init();
-})();
+    function startPopupTimer() {
+      popupTimer = setTimeout(() => {
+        popup.classList.remove("hidden");
+        // Focus on email input
+        setTimeout(() => form.querySelector("input")?.focus(), 100);
+      }, SHOW_DELAY);
+    }
+
+    function closePopup() {
+      popup.classList.add("hidden");
+      clearTimeout(popupTimer);
+      if (form) form.reset();
+      if (successMessage) successMessage.classList.add("hidden");
+      if (form) form.classList.remove("hidden");
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      if (form.checkValidity()) {
+        // Show success message
+        if (successMessage) successMessage.classList.remove("hidden");
+        if (form) form.classList.add("hidden");
+
+        // Auto-close after 3 seconds
+        setTimeout(closePopup, 3000);
+      }
+    }
+
+    init();
+  })();
 
   //preloader
   const preloader = document.getElementById("preloader");

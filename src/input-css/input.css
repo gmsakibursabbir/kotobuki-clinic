@@ -11,7 +11,6 @@
   --color-midgold: #ebdbca; /* Replaced with closest matching new color */
 }
 
-
 #newsletterBg {
   @apply bg-[url('../images/newsletter.jpg')] bg-cover bg-center bg-no-repeat;
 }
@@ -31,7 +30,25 @@
     background-size: 200% 200%;
   }
 }
+.menuss-lists {
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  max-height: 0;
+  opacity: 0;
+}
 
+.menuss-lists.active {
+  max-height: 1000px; /* Adjust based on your content height */
+  opacity: 1;
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
 .animate-ripple-overlay {
   animation: ripple 1.5s ease-out infinite;
   background-image: radial-gradient(

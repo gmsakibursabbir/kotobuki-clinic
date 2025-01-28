@@ -139,7 +139,7 @@
       <!-- hero start -->
       <section
         id="hero"
-        class="text-balance relative w-full pt-10 pb-24 md:pt-20 md:pb-30 min-h-[400px] lg:min-h-[700px] flex items-center justify-center overflow-hidden"
+        class="text-balance relative w-full pt-24 pb-10 md:pt-20 md:pb-30 h-auto lg:min-h-[700px] flex flex-col md:flex-row items-center justify-center overflow-hidden"
       >
         <!-- Video Background -->
         <video
@@ -147,7 +147,7 @@
           loop
           muted
           playsinline
-          class="absolute inset-0 w-full h-full object-cover z-0"
+          class="absolute inset-0 w-full h-full object-cover z-0 hidden md:block"
         >
           <source src="./images/lp.mp4.mp4" type="video/mp4" />
           <source src="./images/lp.mp4" type="video/webm" />
@@ -156,7 +156,7 @@
 
         <!-- Overlay (optional) -->
         <div
-          class="absolute inset-0 bg-gradient-to-t from-middark/80 to-middark/50 z-1"
+          class="absolute inset-0 bg-gradient-to-t from-pastelpink/80 to-midgold/80 md:from-middark/80 md:to-middark/50 z-1"
         ></div>
 
         <!-- Hero Content -->
@@ -175,23 +175,36 @@
                   >
                 </div>
                 <h1
-                  class="text-4xl md:text-7xl text-midgold font-playfair inline-block relative"
+                  class="text-4xl md:text-7xl text-darkgold md:text-midgold font-playfair inline-block relative"
                 >
                   IV Drip in Dubai
                 </h1>
                 <h2
-                  class="text-xl md:text-3xl text-white font-light mt-1 md:mt-2 mb-3 md:mb-5"
+                  class="text-xl md:text-3xl text-middark md:text-white font-light mt-1 md:mt-2 mb-3 md:mb-5"
                 >
                   Home care available
                 </h2>
                 <a
                   href="#"
-                  class="px-3 py-2 md:px-5 md:py-3 bg-darkgold text-white text-xl md:text-2xl rounded-full"
+                  class="px-5 py-3 bg-darkgold text-white text-xl md:text-2xl rounded-full"
                 >
                   Up to 50% off campaign
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+        <div
+          class="w-full md:max-w-[50%] block rounded-xl md:hidden pt-8 z-10 px-4"
+        >
+          <div class="rounded-xl overflow-hidden">
+            <video
+              src="./images/first.mp4"
+              autoplay
+              muted
+              loop
+              class="w-full h-full"
+            ></video>
           </div>
         </div>
       </section>
@@ -214,12 +227,12 @@
         </div>
       </section>
       <!-- why start -->
-      <section id="why" class="bg-softwhite pt-10 pb-7 lg:pt-5 lg:pb-20">
+      <section id="why" class="bg-softwhite pt-10 lg:pt-5 lg:pb-20">
         <div class="max-w-6xl mx-auto px-4">
           <div
             class="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10"
           >
-            <div class="w-full md:max-w-[50%]">
+            <div class="w-full md:max-w-[50%] hidden md:block">
               <div class="aspect-[4/3] rounded-3xl overflow-hidden">
                 <video
                   src="./images/first.mp4"
@@ -349,6 +362,11 @@
               title="KOTOBUKI CLINIC Location Map"
             ></iframe>
           </div>
+          <div class="block md:hidden flex justify-center items-center">
+            <div class="pt-4">
+              <img src="./images/ratings.png" alt="ratings" class="w-[150px]" />
+            </div>
+          </div>
           <div class="w-full md:max-w-[50%] block md:hidden pt-7">
             <div class="why-content">
               <h2
@@ -436,7 +454,7 @@
                       alt="tabby-tamara"
                       class="h-5 md:h-6"
                   /></span>
-                  <div class="ps-2 md:ps-3">
+                  <div class="ps-2 md:ps-3 hidden md:block">
                     <img
                       src="./images/ratings.png"
                       alt="ratings"
@@ -470,20 +488,81 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <!-- item 1 -->
             <div
-              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
+              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d] flex flex-col justify-between"
             >
               <!-- Content Section -->
               <div
-                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white flex flex-col justify-between"
+                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white h-full flex flex-col justify-between"
               >
-                <h3
-                  class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
-                >
-                  Energy & Fitness
-                </h3>
-
+                <div class="">
+                  <h3
+                    class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
+                  >
+                    Energy & Fitness
+                  </h3>
+                  <ul class="menuss-lists space-y-1 md:space-y-2 mt-4 mb-5">
+                    <li
+                      class="flex align-center space-x-2 md:space-x-3 text-sm md:text-md"
+                    >
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Helps to reduce fatigue
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Immune System Support
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Healthy Digestion
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">Better Sleep</p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">Jet Lag</p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Increased Hydration
+                      </p>
+                    </li>
+                  </ul>
+                </div>
                 <!-- Ingredients Dropdown Section -->
-                <div class="mt-5 relative z-50">
+                <div class="">
                   <button
                     class="ingredients-toggle w-full text-left bg-pastelpink p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
                     aria-expanded="false"
@@ -508,30 +587,6 @@
                       </svg>
                     </div>
                   </button>
-
-                  <!-- Dropdown Content -->
-                  <div
-                    class="ingredients-dropdown absolute left-0 w-full bg-pastelpink rounded-t-sm overflow-hidden opacity-0 transition-all duration-300 ease-out origin-top border-b border-darkgold pointer-events-none shadow-t-sm"
-                    style="z-index: 80; bottom: calc(100% + 0rem)"
-                  >
-                    <ul class="p-4 space-y-1 max-h-60 overflow-y-auto text-sm">
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Glutathione
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Vitamin C
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Collagen
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Hyaluronic Acid
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Alpha Arbutin
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               </div>
             </div>
@@ -541,16 +596,77 @@
             >
               <!-- Content Section -->
               <div
-                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white flex flex-col justify-between"
+                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white h-full flex flex-col justify-between"
               >
-                <h3
-                  class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
-                >
-                  Immunity
-                </h3>
-
+                <div class="">
+                  <h3
+                    class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
+                  >
+                    Immunity
+                  </h3>
+                  <ul class="menuss-lists space-y-1 md:space-y-2 mt-4 mb-5">
+                    <li
+                      class="flex align-center space-x-2 md:space-x-3 text-sm md:text-md"
+                    >
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Helps to reduce fatigue
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Immune System Support
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Healthy Digestion
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">Better Sleep</p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">Jet Lag</p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Increased Hydration
+                      </p>
+                    </li>
+                  </ul>
+                </div>
                 <!-- Ingredients Dropdown Section -->
-                <div class="mt-5 relative z-50">
+                <div class="">
                   <button
                     class="ingredients-toggle w-full text-left bg-pastelpink p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
                     aria-expanded="false"
@@ -575,49 +691,86 @@
                       </svg>
                     </div>
                   </button>
-
-                  <!-- Dropdown Content -->
-                  <div
-                    class="ingredients-dropdown absolute left-0 w-full bg-pastelpink rounded-t-sm overflow-hidden opacity-0 transition-all duration-300 ease-out origin-top border-b border-darkgold pointer-events-none shadow-t-sm"
-                    style="z-index: 80; bottom: calc(100% + 0rem)"
-                  >
-                    <ul class="p-4 space-y-1 max-h-60 overflow-y-auto text-sm">
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Glutathione
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Vitamin C
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Collagen
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Hyaluronic Acid
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Alpha Arbutin
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               </div>
             </div>
             <!-- item 3 -->
             <div
-              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
+              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d] flex flex-col justify-between"
             >
               <!-- Content Section -->
               <div
-                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white flex flex-col justify-between"
+                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white h-full flex flex-col justify-between"
               >
-                <h3
-                  class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
-                >
-                  Hangover Cure & Detox
-                </h3>
-
+                <div class="">
+                  <h3
+                    class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
+                  >
+                    Hangover Cure & Detox
+                  </h3>
+                  <ul class="menuss-lists space-y-1 md:space-y-2 mt-4 mb-5">
+                    <li
+                      class="flex align-center space-x-2 md:space-x-3 text-sm md:text-md"
+                    >
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Helps to reduce fatigue
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Immune System Support
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Healthy Digestion
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">Better Sleep</p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">Jet Lag</p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Increased Hydration
+                      </p>
+                    </li>
+                  </ul>
+                </div>
                 <!-- Ingredients Dropdown Section -->
-                <div class="mt-5 relative z-50">
+                <div class="">
                   <button
                     class="ingredients-toggle w-full text-left bg-pastelpink p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
                     aria-expanded="false"
@@ -642,49 +795,86 @@
                       </svg>
                     </div>
                   </button>
-
-                  <!-- Dropdown Content -->
-                  <div
-                    class="ingredients-dropdown absolute left-0 w-full bg-pastelpink rounded-t-sm overflow-hidden opacity-0 transition-all duration-300 ease-out origin-top border-b border-darkgold pointer-events-none shadow-t-sm"
-                    style="z-index: 80; bottom: calc(100% + 0rem)"
-                  >
-                    <ul class="p-4 space-y-1 max-h-60 overflow-y-auto text-sm">
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Glutathione
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Vitamin C
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Collagen
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Hyaluronic Acid
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Alpha Arbutin
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               </div>
             </div>
             <!-- item 4 -->
             <div
-              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
+              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]flex flex-col justify-between"
             >
               <!-- Content Section -->
               <div
-                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white flex flex-col justify-between"
+                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white h-full flex flex-col justify-between"
               >
-                <h3
-                  class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
-                >
-                  Beauty Boost
-                </h3>
-
+                <div class="">
+                  <h3
+                    class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
+                  >
+                    Beauty Boost
+                  </h3>
+                  <ul class="menuss-lists space-y-1 md:space-y-2 mt-4 mb-5">
+                    <li
+                      class="flex align-center space-x-2 md:space-x-3 text-sm md:text-md"
+                    >
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Helps to reduce fatigue
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Immune System Support
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Healthy Digestion
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">Better Sleep</p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">Jet Lag</p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Increased Hydration
+                      </p>
+                    </li>
+                  </ul>
+                </div>
                 <!-- Ingredients Dropdown Section -->
-                <div class="mt-5 relative z-50">
+                <div class="">
                   <button
                     class="ingredients-toggle w-full text-left bg-pastelpink p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
                     aria-expanded="false"
@@ -709,49 +899,86 @@
                       </svg>
                     </div>
                   </button>
-
-                  <!-- Dropdown Content -->
-                  <div
-                    class="ingredients-dropdown absolute left-0 w-full bg-pastelpink rounded-t-sm overflow-hidden opacity-0 transition-all duration-300 ease-out origin-top border-b border-darkgold pointer-events-none shadow-t-sm"
-                    style="z-index: 80; bottom: calc(100% + 0rem)"
-                  >
-                    <ul class="p-4 space-y-1 max-h-60 overflow-y-auto text-sm">
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Glutathione
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Vitamin C
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Collagen
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Hyaluronic Acid
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Alpha Arbutin
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               </div>
             </div>
             <!-- item 5 -->
             <div
-              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
+              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d] flex flex-col justify-between"
             >
               <!-- Content Section -->
               <div
-                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white flex flex-col justify-between"
+                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white h-full flex flex-col justify-between"
               >
-                <h3
-                  class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
-                >
-                  Japaness Quality Whitening
-                </h3>
-
+                <div class="">
+                  <h3
+                    class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
+                  >
+                    Japaness Quality Whitening
+                  </h3>
+                  <ul class="menuss-lists space-y-1 md:space-y-2 mt-4 mb-5">
+                    <li
+                      class="flex align-center space-x-2 md:space-x-3 text-sm md:text-md"
+                    >
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Helps to reduce fatigue
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Immune System Support
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Healthy Digestion
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">Better Sleep</p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">Jet Lag</p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Increased Hydration
+                      </p>
+                    </li>
+                  </ul>
+                </div>
                 <!-- Ingredients Dropdown Section -->
-                <div class="mt-5 relative z-50">
+                <div class="">
                   <button
                     class="ingredients-toggle w-full text-left bg-pastelpink p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
                     aria-expanded="false"
@@ -776,49 +1003,86 @@
                       </svg>
                     </div>
                   </button>
-
-                  <!-- Dropdown Content -->
-                  <div
-                    class="ingredients-dropdown absolute left-0 w-full bg-pastelpink rounded-t-sm overflow-hidden opacity-0 transition-all duration-300 ease-out origin-top border-b border-darkgold pointer-events-none shadow-t-sm"
-                    style="z-index: 80; bottom: calc(100% + 0rem)"
-                  >
-                    <ul class="p-4 space-y-1 max-h-60 overflow-y-auto text-sm">
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Glutathione
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Vitamin C
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Collagen
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Hyaluronic Acid
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Alpha Arbutin
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               </div>
             </div>
             <!-- item 6 -->
             <div
-              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
+              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d] flex flex-col justify-between"
             >
               <!-- Content Section -->
               <div
-                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white flex flex-col justify-between"
+                class="relative formula-item-content rounded-xl p-6 bg-white h-full flex flex-col justify-between"
               >
-                <h3
-                  class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
-                >
-                  NAD+
-                </h3>
-
+                <div class="">
+                  <h3
+                    class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
+                  >
+                    NAD+
+                  </h3>
+                  <ul class="menuss-lists space-y-1 md:space-y-2 mt-4 mb-5">
+                    <li
+                      class="flex align-center space-x-2 md:space-x-3 text-sm md:text-md"
+                    >
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Helps to reduce fatigue
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Immune System Support
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Healthy Digestion
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">Better Sleep</p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">Jet Lag</p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Increased Hydration
+                      </p>
+                    </li>
+                  </ul>
+                </div>
                 <!-- Ingredients Dropdown Section -->
-                <div class="mt-5 relative z-50">
+                <div class="">
                   <button
                     class="ingredients-toggle w-full text-left bg-pastelpink p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
                     aria-expanded="false"
@@ -843,49 +1107,86 @@
                       </svg>
                     </div>
                   </button>
-
-                  <!-- Dropdown Content -->
-                  <div
-                    class="ingredients-dropdown absolute left-0 w-full bg-pastelpink rounded-t-sm overflow-hidden opacity-0 transition-all duration-300 ease-out origin-top border-b border-darkgold pointer-events-none shadow-t-sm"
-                    style="z-index: 80; bottom: calc(100% + 0rem)"
-                  >
-                    <ul class="p-4 space-y-1 max-h-60 overflow-y-auto text-sm">
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Glutathione
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Vitamin C
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Collagen
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Hyaluronic Acid
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Alpha Arbutin
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               </div>
             </div>
             <!-- item 7 -->
             <div
-              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
+              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d] flex flex-col justify-between"
             >
               <!-- Content Section -->
               <div
-                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white flex flex-col justify-between"
+                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white h-full flex flex-col justify-between"
               >
-                <h3
-                  class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
-                >
-                  Stem Cell Therapy
-                </h3>
-
+                <div class="">
+                  <h3
+                    class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
+                  >
+                    Stem Cell Therapy
+                  </h3>
+                  <ul class="menuss-lists space-y-1 md:space-y-2 mt-4 mb-5">
+                    <li
+                      class="flex align-center space-x-2 md:space-x-3 text-sm md:text-md"
+                    >
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Helps to reduce fatigue
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Immune System Support
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Healthy Digestion
+                      </p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">Better Sleep</p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">Jet Lag</p>
+                    </li>
+                    <li class="flex align-center space-x-3 text-sm md:text-md">
+                      <img
+                        src="./images/circle-check.svg"
+                        alt="check"
+                        class="w-4 -mt-[5px]"
+                      />
+                      <p class="text-darkgold font-semibold">
+                        Increased Hydration
+                      </p>
+                    </li>
+                  </ul>
+                </div>
                 <!-- Ingredients Dropdown Section -->
-                <div class="mt-5 relative z-50">
+                <div class="">
                   <button
                     class="ingredients-toggle w-full text-left bg-pastelpink p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
                     aria-expanded="false"
@@ -910,30 +1211,6 @@
                       </svg>
                     </div>
                   </button>
-
-                  <!-- Dropdown Content -->
-                  <div
-                    class="ingredients-dropdown absolute left-0 w-full bg-pastelpink rounded-t-sm overflow-hidden opacity-0 transition-all duration-300 ease-out origin-top border-b border-darkgold pointer-events-none shadow-t-sm"
-                    style="z-index: 80; bottom: calc(100% + 0rem)"
-                  >
-                    <ul class="p-4 space-y-1 max-h-60 overflow-y-auto text-sm">
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Glutathione
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Vitamin C
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Collagen
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Hyaluronic Acid
-                      </li>
-                      <li class="text-middark flex items-center">
-                        <span class="mr-2">•</span> Alpha Arbutin
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               </div>
             </div>
