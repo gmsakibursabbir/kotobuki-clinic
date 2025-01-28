@@ -31,7 +31,7 @@ toggleButtons.forEach((button) => {
 
     // Toggle current menu
     menuList.classList.toggle("active");
-    arrow.classList.toggle("rotate-180");
+    arrow.classList.toggle("rotate-179");
 
     // Update aria-expanded
     const isExpanded = menuList.classList.contains("active");
