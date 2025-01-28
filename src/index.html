@@ -139,7 +139,7 @@
       <!-- hero start -->
       <section
         id="hero"
-        class="text-balance relative w-full pt-10 pb-24 md:pt-20 md:pb-30 min-h-[500px] lg:min-h-[700px] flex items-center justify-center overflow-hidden"
+        class="text-balance relative w-full pt-10 pb-24 md:pt-20 md:pb-30 min-h-[400px] lg:min-h-[700px] flex items-center justify-center overflow-hidden"
       >
         <!-- Video Background -->
         <video
@@ -196,7 +196,7 @@
         </div>
       </section>
       <!-- map start -->
-      <section id="map" class="bg-softwhite">
+      <section id="map" class="bg-softwhite hidden md:block md:-mb-10">
         <div class="max-w-4xl mx-auto px-4">
           <div
             class="relative z-10 -top-30 border-4 md:border-6 border-pastelpink rounded-xl md:rounded-2xl"
@@ -214,7 +214,7 @@
         </div>
       </section>
       <!-- why start -->
-      <section id="why" class="bg-softwhite pb-10 lg:pt-5 lg:pb-20">
+      <section id="why" class="bg-softwhite pt-10 pb-7 lg:pt-5 lg:pb-20">
         <div class="max-w-6xl mx-auto px-4">
           <div
             class="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10"
@@ -230,7 +230,7 @@
                 ></video>
               </div>
             </div>
-            <div class="w-full md:max-w-[50%]">
+            <div class="w-full md:max-w-[50%] hidden md:block">
               <div class="why-content">
                 <h2
                   class="text-2xl lg:text-4xl text-darkgold font-playfair font-semibold pb-3 text-center md:text-start"
@@ -333,6 +333,122 @@
           </div>
         </div>
       </section>
+      <!-- maps start -->
+      <section id="maps" class="bg-softwhite block md:hidden pb-10">
+        <div class="max-w-4xl mx-auto px-4">
+          <div
+            class="relative z-10 md:-top-30 border-4 md:border-6 border-pastelpink rounded-xl md:rounded-2xl"
+          >
+            <iframe
+              class="w-full h-[220px] md:h-[240px] md:h-[300px] rounded-lg md:rounded-xl shadow-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.451889231877!2d55.28110139999999!3d25.2217004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f430e7260455d%3A0x13a28ac7341d02d2!2sKotobuki%20Clinic!5e0!3m2!1sen!2sbd!4v1737895602655!5m2!1sen!2sbd"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="KOTOBUKI CLINIC Location Map"
+            ></iframe>
+          </div>
+          <div class="w-full md:max-w-[50%] block md:hidden pt-7">
+            <div class="why-content">
+              <h2
+                class="text-2xl lg:text-4xl text-darkgold font-playfair font-semibold pb-3 text-center md:text-start"
+              >
+                Features
+              </h2>
+              <ul class="hero-lists space-y-1 md:space-y-2 mt-4">
+                <li
+                  class="flex align-center space-x-2 md:space-x-3 text-sm md:text-lg"
+                >
+                  <img
+                    src="./images/circle-check.svg"
+                    alt="check"
+                    class="w-5 -mt-[5px]"
+                  />
+                  <p class="text-darkgold font-semibold">
+                    Up to 50% off
+                    <sup class="text-middark">*</sup>
+                  </p>
+                </li>
+                <li class="flex align-center space-x-3 text-sm md:text-lg">
+                  <img
+                    src="./images/circle-check.svg"
+                    alt="check"
+                    class="w-5 -mt-[5px]"
+                  />
+                  <p class="text-darkgold font-semibold">Google review 4.9</p>
+                </li>
+                <li class="flex align-center space-x-3 text-sm md:text-lg">
+                  <img
+                    src="./images/circle-check.svg"
+                    alt="check"
+                    class="w-5 -mt-[5px]"
+                  />
+                  <p class="text-darkgold font-semibold">
+                    Japanese quality hospitality
+                  </p>
+                </li>
+                <li class="flex align-center space-x-3 text-sm md:text-lg">
+                  <img
+                    src="./images/circle-check.svg"
+                    alt="check"
+                    class="w-5 -mt-[5px]"
+                  />
+                  <p class="text-darkgold font-semibold">MOH & DHA approved</p>
+                </li>
+                <li class="flex align-center space-x-3 text-sm md:text-lg">
+                  <img
+                    src="./images/circle-check.svg"
+                    alt="check"
+                    class="w-5 -mt-[5px]"
+                  />
+                  <p class="text-darkgold font-semibold">
+                    Fresh & Active Ingredients (by Fusion)
+                  </p>
+                </li>
+                <li class="flex align-center space-x-3 text-sm md:text-lg">
+                  <img
+                    src="./images/circle-check.svg"
+                    alt="check"
+                    class="w-5 -mt-[5px]"
+                  />
+                  <p class="text-darkgold font-semibold">
+                    Free home visit (for all IV drips over AED 600)
+                  </p>
+                </li>
+                <li class="flex align-center space-x-3 text-sm md:text-lg">
+                  <img
+                    src="./images/circle-check.svg"
+                    alt="check"
+                    class="w-5 -mt-[5px]"
+                  />
+                  <p class="text-darkgold font-semibold mb-0">
+                    Pay in interest-free monthly instalments
+                  </p>
+                </li>
+                <li
+                  class="flex justify-center md:justify-start items-center align-center space-x-3 text-lg mt-4"
+                >
+                  <p class="text-sm text-middark">We Accept</p>
+                  <span
+                    ><img
+                      src="./images/tabby-tamara.png"
+                      alt="tabby-tamara"
+                      class="h-5 md:h-6"
+                  /></span>
+                  <div class="ps-2 md:ps-3">
+                    <img
+                      src="./images/ratings.png"
+                      alt="ratings"
+                      class="w-30 md:w-[140px]"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- menus -->
       <section id="menus" class="py-10 lg:py-20">
         <div class="max-w-6xl mx-auto px-4">
@@ -354,84 +470,28 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <!-- item 1 -->
             <div
-              class="formula-card group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
+              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
             >
               <!-- Content Section -->
-              <div class="relative formula-item-content p-6 bg-white">
+              <div
+                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white flex flex-col justify-between"
+              >
                 <h3
                   class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
                 >
                   Energy & Fitness
                 </h3>
 
-                <ul class="hero-lists space-y-1 mt-4">
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Helps to reduce fatigue</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Immune System Support</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Immune System Support</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Healthy Digestion</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Better Sleep</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Jet Lag</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Increased Hydration</p>
-                  </li>
-                </ul>
                 <!-- Ingredients Dropdown Section -->
                 <div class="mt-5 relative z-50">
                   <button
-                    class="ingredients-toggle w-full text-left bg-softwhite p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
+                    class="ingredients-toggle w-full text-left bg-pastelpink p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
                     aria-expanded="false"
                     aria-controls="ingredientsDropdown"
                   >
                     <span class="text-middark font-semibold">Ingredients</span>
                     <div
-                      class="p-1 bg-pastelpink flex justify-center items-center rounded-full"
+                      class="p-1 bg-darkgold flex justify-center items-center rounded-full"
                     >
                       <svg
                         class="dropdown-arrow w-4 h-4 transition-transform duration-300"
@@ -451,8 +511,8 @@
 
                   <!-- Dropdown Content -->
                   <div
-                    class="ingredients-dropdown absolute bottom-full left-0 w-full bg-softwhite rounded-t-sm overflow-hidden transform translate-y-4 opacity-0 transition-all duration-300 ease-out origin-bottom border-b border-midgold pointer-events-none"
-                    style="z-index: 80"
+                    class="ingredients-dropdown absolute left-0 w-full bg-pastelpink rounded-t-sm overflow-hidden opacity-0 transition-all duration-300 ease-out origin-top border-b border-darkgold pointer-events-none shadow-t-sm"
+                    style="z-index: 80; bottom: calc(100% + 0rem)"
                   >
                     <ul class="p-4 space-y-1 max-h-60 overflow-y-auto text-sm">
                       <li class="text-middark flex items-center">
@@ -477,84 +537,28 @@
             </div>
             <!-- item 2 -->
             <div
-              class="formula-card group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
+              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
             >
               <!-- Content Section -->
-              <div class="relative formula-item-content p-6 bg-white">
+              <div
+                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white flex flex-col justify-between"
+              >
                 <h3
                   class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
                 >
                   Immunity
                 </h3>
 
-                <ul class="hero-lists space-y-1 mt-4">
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Helps to reduce fatigue</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Immune System Support</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Immune System Support</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Healthy Digestion</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Better Sleep</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Jet Lag</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Increased Hydration</p>
-                  </li>
-                </ul>
                 <!-- Ingredients Dropdown Section -->
                 <div class="mt-5 relative z-50">
                   <button
-                    class="ingredients-toggle w-full text-left bg-softwhite p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
+                    class="ingredients-toggle w-full text-left bg-pastelpink p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
                     aria-expanded="false"
                     aria-controls="ingredientsDropdown"
                   >
                     <span class="text-middark font-semibold">Ingredients</span>
                     <div
-                      class="p-1 bg-pastelpink flex justify-center items-center rounded-full"
+                      class="p-1 bg-darkgold flex justify-center items-center rounded-full"
                     >
                       <svg
                         class="dropdown-arrow w-4 h-4 transition-transform duration-300"
@@ -574,8 +578,8 @@
 
                   <!-- Dropdown Content -->
                   <div
-                    class="ingredients-dropdown absolute bottom-full left-0 w-full bg-softwhite rounded-t-sm overflow-hidden transform translate-y-4 opacity-0 transition-all duration-300 ease-out origin-bottom border-b border-midgold pointer-events-none"
-                    style="z-index: 80"
+                    class="ingredients-dropdown absolute left-0 w-full bg-pastelpink rounded-t-sm overflow-hidden opacity-0 transition-all duration-300 ease-out origin-top border-b border-darkgold pointer-events-none shadow-t-sm"
+                    style="z-index: 80; bottom: calc(100% + 0rem)"
                   >
                     <ul class="p-4 space-y-1 max-h-60 overflow-y-auto text-sm">
                       <li class="text-middark flex items-center">
@@ -600,84 +604,28 @@
             </div>
             <!-- item 3 -->
             <div
-              class="formula-card group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
+              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
             >
               <!-- Content Section -->
-              <div class="relative formula-item-content p-6 bg-white">
+              <div
+                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white flex flex-col justify-between"
+              >
                 <h3
                   class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
                 >
                   Hangover Cure & Detox
                 </h3>
 
-                <ul class="hero-lists space-y-1 mt-4">
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Helps to reduce fatigue</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Immune System Support</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Immune System Support</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Healthy Digestion</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Better Sleep</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Jet Lag</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Increased Hydration</p>
-                  </li>
-                </ul>
                 <!-- Ingredients Dropdown Section -->
                 <div class="mt-5 relative z-50">
                   <button
-                    class="ingredients-toggle w-full text-left bg-softwhite p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
+                    class="ingredients-toggle w-full text-left bg-pastelpink p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
                     aria-expanded="false"
                     aria-controls="ingredientsDropdown"
                   >
                     <span class="text-middark font-semibold">Ingredients</span>
                     <div
-                      class="p-1 bg-pastelpink flex justify-center items-center rounded-full"
+                      class="p-1 bg-darkgold flex justify-center items-center rounded-full"
                     >
                       <svg
                         class="dropdown-arrow w-4 h-4 transition-transform duration-300"
@@ -697,8 +645,8 @@
 
                   <!-- Dropdown Content -->
                   <div
-                    class="ingredients-dropdown absolute bottom-full left-0 w-full bg-softwhite rounded-t-sm overflow-hidden transform translate-y-4 opacity-0 transition-all duration-300 ease-out origin-bottom border-b border-midgold pointer-events-none"
-                    style="z-index: 80"
+                    class="ingredients-dropdown absolute left-0 w-full bg-pastelpink rounded-t-sm overflow-hidden opacity-0 transition-all duration-300 ease-out origin-top border-b border-darkgold pointer-events-none shadow-t-sm"
+                    style="z-index: 80; bottom: calc(100% + 0rem)"
                   >
                     <ul class="p-4 space-y-1 max-h-60 overflow-y-auto text-sm">
                       <li class="text-middark flex items-center">
@@ -723,84 +671,28 @@
             </div>
             <!-- item 4 -->
             <div
-              class="formula-card group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
+              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
             >
               <!-- Content Section -->
-              <div class="relative formula-item-content p-6 bg-white">
+              <div
+                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white flex flex-col justify-between"
+              >
                 <h3
                   class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
                 >
                   Beauty Boost
                 </h3>
 
-                <ul class="hero-lists space-y-1 mt-4">
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Helps to reduce fatigue</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Immune System Support</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Immune System Support</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Healthy Digestion</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Better Sleep</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Jet Lag</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Increased Hydration</p>
-                  </li>
-                </ul>
                 <!-- Ingredients Dropdown Section -->
                 <div class="mt-5 relative z-50">
                   <button
-                    class="ingredients-toggle w-full text-left bg-softwhite p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
+                    class="ingredients-toggle w-full text-left bg-pastelpink p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
                     aria-expanded="false"
                     aria-controls="ingredientsDropdown"
                   >
                     <span class="text-middark font-semibold">Ingredients</span>
                     <div
-                      class="p-1 bg-pastelpink flex justify-center items-center rounded-full"
+                      class="p-1 bg-darkgold flex justify-center items-center rounded-full"
                     >
                       <svg
                         class="dropdown-arrow w-4 h-4 transition-transform duration-300"
@@ -820,8 +712,8 @@
 
                   <!-- Dropdown Content -->
                   <div
-                    class="ingredients-dropdown absolute bottom-full left-0 w-full bg-softwhite rounded-t-sm overflow-hidden transform translate-y-4 opacity-0 transition-all duration-300 ease-out origin-bottom border-b border-midgold pointer-events-none"
-                    style="z-index: 80"
+                    class="ingredients-dropdown absolute left-0 w-full bg-pastelpink rounded-t-sm overflow-hidden opacity-0 transition-all duration-300 ease-out origin-top border-b border-darkgold pointer-events-none shadow-t-sm"
+                    style="z-index: 80; bottom: calc(100% + 0rem)"
                   >
                     <ul class="p-4 space-y-1 max-h-60 overflow-y-auto text-sm">
                       <li class="text-middark flex items-center">
@@ -846,84 +738,28 @@
             </div>
             <!-- item 5 -->
             <div
-              class="formula-card group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
+              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
             >
               <!-- Content Section -->
-              <div class="relative formula-item-content p-6 bg-white">
+              <div
+                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white flex flex-col justify-between"
+              >
                 <h3
                   class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
                 >
                   Japaness Quality Whitening
                 </h3>
 
-                <ul class="hero-lists space-y-1 mt-4">
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Helps to reduce fatigue</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Immune System Support</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Immune System Support</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Healthy Digestion</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Better Sleep</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Jet Lag</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Increased Hydration</p>
-                  </li>
-                </ul>
                 <!-- Ingredients Dropdown Section -->
                 <div class="mt-5 relative z-50">
                   <button
-                    class="ingredients-toggle w-full text-left bg-softwhite p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
+                    class="ingredients-toggle w-full text-left bg-pastelpink p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
                     aria-expanded="false"
                     aria-controls="ingredientsDropdown"
                   >
                     <span class="text-middark font-semibold">Ingredients</span>
                     <div
-                      class="p-1 bg-pastelpink flex justify-center items-center rounded-full"
+                      class="p-1 bg-darkgold flex justify-center items-center rounded-full"
                     >
                       <svg
                         class="dropdown-arrow w-4 h-4 transition-transform duration-300"
@@ -943,8 +779,8 @@
 
                   <!-- Dropdown Content -->
                   <div
-                    class="ingredients-dropdown absolute bottom-full left-0 w-full bg-softwhite rounded-t-sm overflow-hidden transform translate-y-4 opacity-0 transition-all duration-300 ease-out origin-bottom border-b border-midgold pointer-events-none"
-                    style="z-index: 80"
+                    class="ingredients-dropdown absolute left-0 w-full bg-pastelpink rounded-t-sm overflow-hidden opacity-0 transition-all duration-300 ease-out origin-top border-b border-darkgold pointer-events-none shadow-t-sm"
+                    style="z-index: 80; bottom: calc(100% + 0rem)"
                   >
                     <ul class="p-4 space-y-1 max-h-60 overflow-y-auto text-sm">
                       <li class="text-middark flex items-center">
@@ -969,84 +805,28 @@
             </div>
             <!-- item 6 -->
             <div
-              class="formula-card group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
+              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
             >
               <!-- Content Section -->
-              <div class="relative formula-item-content p-6 bg-white">
+              <div
+                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white flex flex-col justify-between"
+              >
                 <h3
                   class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
                 >
                   NAD+
                 </h3>
 
-                <ul class="hero-lists space-y-1 mt-4">
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Helps to reduce fatigue</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Immune System Support</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Immune System Support</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Healthy Digestion</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Better Sleep</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Jet Lag</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Increased Hydration</p>
-                  </li>
-                </ul>
                 <!-- Ingredients Dropdown Section -->
                 <div class="mt-5 relative z-50">
                   <button
-                    class="ingredients-toggle w-full text-left bg-softwhite p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
+                    class="ingredients-toggle w-full text-left bg-pastelpink p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
                     aria-expanded="false"
                     aria-controls="ingredientsDropdown"
                   >
                     <span class="text-middark font-semibold">Ingredients</span>
                     <div
-                      class="p-1 bg-pastelpink flex justify-center items-center rounded-full"
+                      class="p-1 bg-darkgold flex justify-center items-center rounded-full"
                     >
                       <svg
                         class="dropdown-arrow w-4 h-4 transition-transform duration-300"
@@ -1066,8 +846,8 @@
 
                   <!-- Dropdown Content -->
                   <div
-                    class="ingredients-dropdown absolute bottom-full left-0 w-full bg-softwhite rounded-t-sm overflow-hidden transform translate-y-4 opacity-0 transition-all duration-300 ease-out origin-bottom border-b border-midgold pointer-events-none"
-                    style="z-index: 80"
+                    class="ingredients-dropdown absolute left-0 w-full bg-pastelpink rounded-t-sm overflow-hidden opacity-0 transition-all duration-300 ease-out origin-top border-b border-darkgold pointer-events-none shadow-t-sm"
+                    style="z-index: 80; bottom: calc(100% + 0rem)"
                   >
                     <ul class="p-4 space-y-1 max-h-60 overflow-y-auto text-sm">
                       <li class="text-middark flex items-center">
@@ -1092,84 +872,28 @@
             </div>
             <!-- item 7 -->
             <div
-              class="formula-card group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
+              class="formula-card group rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-[1px] border-[#3939394d]"
             >
               <!-- Content Section -->
-              <div class="relative formula-item-content p-6 bg-white">
+              <div
+                class="relative formula-item-content rounded-xl min-h-[150px] p-6 bg-white flex flex-col justify-between"
+              >
                 <h3
                   class="text-xl md:text-2xl font-bold font-playfair text-darkgold mb-1"
                 >
                   Stem Cell Therapy
                 </h3>
 
-                <ul class="hero-lists space-y-1 mt-4">
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Helps to reduce fatigue</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Immune System Support</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Immune System Support</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Healthy Digestion</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Better Sleep</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Jet Lag</p>
-                  </li>
-                  <li class="flex align-center space-x-2">
-                    <img
-                      src="./images/circle-check.svg"
-                      alt="check"
-                      class="w-4 -mt-[6px]"
-                    />
-                    <p class="text-middark">Increased Hydration</p>
-                  </li>
-                </ul>
                 <!-- Ingredients Dropdown Section -->
                 <div class="mt-5 relative z-50">
                   <button
-                    class="ingredients-toggle w-full text-left bg-softwhite p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
+                    class="ingredients-toggle w-full text-left bg-pastelpink p-3 rounded-sm cursor-pointer focus:outline-none flex items-center justify-between relative"
                     aria-expanded="false"
                     aria-controls="ingredientsDropdown"
                   >
                     <span class="text-middark font-semibold">Ingredients</span>
                     <div
-                      class="p-1 bg-pastelpink flex justify-center items-center rounded-full"
+                      class="p-1 bg-darkgold flex justify-center items-center rounded-full"
                     >
                       <svg
                         class="dropdown-arrow w-4 h-4 transition-transform duration-300"
@@ -1189,8 +913,8 @@
 
                   <!-- Dropdown Content -->
                   <div
-                    class="ingredients-dropdown absolute bottom-full left-0 w-full bg-softwhite rounded-t-sm overflow-hidden transform translate-y-4 opacity-0 transition-all duration-300 ease-out origin-bottom border-b border-midgold pointer-events-none"
-                    style="z-index: 80"
+                    class="ingredients-dropdown absolute left-0 w-full bg-pastelpink rounded-t-sm overflow-hidden opacity-0 transition-all duration-300 ease-out origin-top border-b border-darkgold pointer-events-none shadow-t-sm"
+                    style="z-index: 80; bottom: calc(100% + 0rem)"
                   >
                     <ul class="p-4 space-y-1 max-h-60 overflow-y-auto text-sm">
                       <li class="text-middark flex items-center">
