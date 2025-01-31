@@ -1673,7 +1673,7 @@
     <!-- scroll to top end -->
     <!-- popup start -->
 
-    <div
+    <!-- <div
       id="newsletter-popup"
       class="hidden fixed inset-0 z-[1000] flex items-center justify-center p-4"
     >
@@ -1752,6 +1752,130 @@
                   class="w-full px-4 bg-white py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastelpink resize-none"
                 ></textarea>
               </div>
+              <button
+                type="submit"
+                class="w-full bg-pastelpink text-middark hover:text-white py-3 px-4 rounded-lg hover:bg-middark focus:outline-none focus:ring-2 focus:ring-darkgold cursor-pointer"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div
+      id="newsletter-popup"
+      class="hidden fixed inset-0 z-[1000] flex items-center justify-center p-4"
+    >
+      <div
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm js-popup-close"
+      ></div>
+
+      <div
+        class="relative z-[1001] w-full max-w-3xl rounded-2xl p-6 animate-popup-in"
+      >
+        <button
+          class="js-popup-close absolute top-0 right-4 text-2xl text-white hover:text-softwhite transition duration-300 cousor-pointer"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <div
+          class="bg-softwhite flex flex-col md:flex-row justify-between items-stretch text-center shadow-xl rounded-2xl md:min-h-[500px]"
+        >
+          <div
+            class="w-full md:w-3/7 relative rounded-r-2xl rounded-l-2xl md:rounded-r-none overflow-hidden bg-cover bg-center"
+            style="background-image: url('./images/newsletter.jpg')"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-middark/100 to-middark/50"
+            ></div>
+
+            <div
+              class="relative z-10 h-full flex flex-col justify-center items-center md:space-y-2 p-4 md:p-8 text-middark"
+            >
+              <div
+                class="w-20 h-20 rounded-full bg-pastelpink flex flex-col items-center justify-center mx-auto mb-3"
+              >
+                <span class="text-xs text-middark">From</span>
+                <span class="text-sm font-bold text-middark">AED 240</span>
+              </div>
+              <h2
+                class="text-4xl text-midgold font-playfair inline-block relative text-center"
+              >
+                IV Drip in Dubai
+              </h2>
+              <h3 class="text-xl text-white font-light mt-1 mb-3 text-center">
+                Home care available
+              </h3>
+              <a
+                href="#"
+                class="px-4 py-2 bg-darkgold text-white text-lg rounded-full mx-auto"
+              >
+                Up to 50% off campaign
+              </a>
+            </div>
+          </div>
+          <div
+            class="w-full md:w-4/7 p-4 md:p-5 flex flex-col justify-center items-center"
+          >
+            <form class="mx-auto w-full">
+              <h2
+                class="text-lg md:text-2xl text-darkgold font-semibold mb-6 text-capitalize hidden md:inline"
+              >
+                Fill The Form and Our team will Contact You
+              </h2>
+
+              <div class="mb-4 text-start">
+                <label for="names" class="text-middark mb-3"
+                  >Name (Required)</label
+                >
+                <input
+                  type="text"
+                  id="names"
+                  placeholder="Name"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastelpink"
+                />
+              </div>
+
+              <div class="mb-4 text-start">
+                <label for="phones" class="text-middark mb-3"
+                  >Number (Required)</label
+                >
+                <input
+                  type="tel"
+                  id="phones"
+                  placeholder="Number"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastelpink"
+                />
+              </div>
+
+              <div class="mb-3 text-start">
+                <label for="messengers" class="text-middark mb-3"
+                  >Messenge (Optional)</label
+                >
+                <textarea
+                  id="messengers"
+                  placeholder="Message"
+                  rows="4"
+                  class="w-full px-4 bg-white py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastelpink resize-none"
+                ></textarea>
+              </div>
 
               <!-- Submit Button -->
               <button
@@ -1765,7 +1889,6 @@
         </div>
       </div>
     </div>
-
     <!-- popup end -->
     <!-- preloader start -->
 
